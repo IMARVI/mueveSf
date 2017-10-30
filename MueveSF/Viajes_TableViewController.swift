@@ -70,6 +70,7 @@ class Viajes_TableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "filtradoSegue"{
         let siguienteV = segue.destination as! DetalleViaje_ViewController
         let indice = self.tableView.indexPathForSelectedRow?.row
         var viaje = nuevoArray?[indice!] as! [String: Any]
@@ -99,6 +100,8 @@ class Viajes_TableViewController: UITableViewController, UISearchBarDelegate {
         siguienteV.dateF = c
         siguienteV.spd = d
         siguienteV.nombre = e
+            
+        }
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {

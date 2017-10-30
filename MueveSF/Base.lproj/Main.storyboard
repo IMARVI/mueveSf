@@ -180,7 +180,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button" image="if_icon-ios7-arrow-back_211686"/>
                                     <connections>
-                                        <segue destination="VgF-Gt-emV" kind="show" id="aHS-Bu-afn"/>
+                                        <segue destination="VgF-Gt-emV" kind="show" identifier="refMiPerfil" id="aHS-Bu-afn"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -197,7 +197,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9308889508" green="0.26623076200000001" blue="0.65799814459999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="tmt-Z8-9bn" kind="show" id="FbH-hy-Jim"/>
+                                    <segue destination="tmt-Z8-9bn" kind="show" identifier="filtradoSegue" id="FbH-hy-Jim"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -914,6 +914,7 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
         <image name="logo" width="497" height="171"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="FbH-hy-Jim"/>
         <segue reference="pj5-00-mq5"/>
         <segue reference="SyR-Hd-Lp3"/>
         <segue reference="4v7-aE-PmV"/>
