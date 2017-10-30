@@ -72,11 +72,17 @@ class PantallaAvance_ViewController: UIViewController, CLLocationManagerDelegate
         let hrs = counter/36000
         let min = (counter%3600)/60
         let seg = (counter%3600)%60
+        var segtxt:String
         var txt = ""
+        if seg < 10 {
+            segtxt = "0\(seg)"
+        } else {
+            segtxt = "\(seg)"
+        }
         if min<10 {
-            txt = "0\(hrs):0\(min):\(seg)"
+            txt = "0\(hrs):0\(min):\(segtxt)"
         }else{
-        txt = "0\(hrs):\(min):\(seg)"
+        txt = "0\(hrs):\(min):\(segtxt)"
         }
         timer.text = String(txt)
     }

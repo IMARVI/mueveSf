@@ -8,14 +8,9 @@
 
 import UIKit
 
-class Lugares_TableViewController: UITableViewController, UISearchBarDelegate{
+class Lugares_TableViewController: UITableViewController {
     let direccion = "http://199.233.252.86/201713/SwitchesDeMarfil/lugares_visitados.json"
     var nuevoArray : [Any]?
-    var searchActive : Bool = false
-    var data = [String]()
-    var filtered:[String] = []
-    
-    @IBOutlet weak var searchB: UISearchBar!
     
     func JSONParseArray(_ string:String) -> [AnyObject]{
         if let data = string.data(using: String.Encoding.utf8){
@@ -37,10 +32,6 @@ class Lugares_TableViewController: UITableViewController, UISearchBarDelegate{
         let url = URL(string: direccion)
         let datos = try? Data(contentsOf: url!)
         nuevoArray = try! JSONSerialization.jsonObject(with: datos!) as? [Any]
-        tableView.delegate = self
-        tableView.dataSource = self
-        searchB.delegate = self
-        fillArray()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -61,68 +52,23 @@ class Lugares_TableViewController: UITableViewController, UISearchBarDelegate{
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if(searchActive) {
-            return filtered.count
-        }
         return (nuevoArray?.count)!
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Lugares", for: indexPath)
-        
-        if(searchActive){
-            cell.textLabel?.text = filtered[indexPath.row]
-        } else {
-            let lugares = nuevoArray?[indexPath.row] as! [String: Any]
-            let s:String = lugares["nombre"] as! String
-            cell.textLabel?.text = s
-        }
+
         // Configure the cell...
+        let lugares = nuevoArray?[indexPath.row] as! [String: Any]
+        let s:String = lugares["nombre"] as! String
+        cell.textLabel?.text = s
         cell.textLabel?.textColor = UIColor.white
         cell.textLabel?.font = UIFont(name:"SystemThin", size:28)
         return cell
     }
     
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchActive = true;
-    }
-    
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        searchActive = false;
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchActive = false;
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchActive = false;
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filtered = data.filter({ (text) -> Bool in
-            let tmp: NSString = text as NSString
-            let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
-            return range.location != NSNotFound
-        })
-        if(filtered.count == 0){
-            searchActive = false;
-        } else {
-            searchActive = true;
-        }
-        self.tableView.reloadData()
-    }
-    
-    func fillArray(){
-        var i = 0
-        for _ in nuevoArray!{
-            let viaje = nuevoArray?[i] as! [String: Any]
-            let s:String = viaje ["nombre"] as! String
-            data.append(s)
-            i = i+1
-        }
-    }
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
