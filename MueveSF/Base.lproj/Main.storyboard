@@ -15,54 +15,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Stats View Controller-->
-        <scene sceneID="9gg-kb-n8k">
-            <objects>
-                <viewController id="6Ij-d3-uxY" customClass="Stats_ViewController" customModule="MueveSF" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DF5-Ke-Z5m">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1220"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7A-wK-LN9">
-                                <rect key="frame" x="16" y="38" width="61" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="if_icon-ios7-arrow-back_211686"/>
-                                <connections>
-                                    <segue destination="VgF-Gt-emV" kind="show" id="6KA-ll-ZY1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJN-uz-6hQ">
-                                <rect key="frame" x="169" y="49" width="190" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
-                                <state key="normal" title="MIS ESTADÍSTICAS">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MxW-C7-Hf6" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="47" y="123" width="312" height="303"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.96909385920000002" green="0.8492450118" blue="0.85199362040000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u9g-TT-x9a" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="47" y="454" width="312" height="287"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.96909385920000002" green="0.8492450118" blue="0.85199362040000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="0.74799755379999999" green="0.13493113770000001" blue="0.51025884430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="wZB-7G-XPH"/>
-                    </view>
-                    <size key="freeformSize" width="375" height="1220"/>
-                    <connections>
-                        <outlet property="chtChart" destination="MxW-C7-Hf6" id="Hxc-bC-9WT"/>
-                        <outlet property="pieChart" destination="u9g-TT-x9a" id="4Zz-3c-JbH"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4yg-0s-naG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1692" y="540.62968515742136"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="Usw-X7-Sz3">
             <objects>
@@ -137,15 +89,15 @@
                                 <color key="textColor" red="0.9760536984" green="0.97275929240000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZD-Wr-B28">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIw-z8-waP">
                                 <rect key="frame" x="190" y="539" width="139" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="29"/>
-                                <state key="normal" title="Estadísticas">
+                                <state key="normal" title="Estadisticas">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6Ij-d3-uxY" kind="show" id="hIs-NK-Hag"/>
+                                    <segue destination="YQB-K9-qMW" kind="show" id="b7g-hJ-Vvg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -239,7 +191,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button" image="if_icon-ios7-arrow-back_211686"/>
                                     <connections>
-                                        <segue destination="VgF-Gt-emV" kind="show" id="aHS-Bu-afn"/>
+                                        <segue destination="VgF-Gt-emV" kind="show" identifier="refMiPerfil" id="aHS-Bu-afn"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -252,10 +204,11 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X0u-IM-2Lg" id="6cy-tY-obk">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <color key="tintColor" red="0.96880942579999996" green="0.48815721270000001" blue="0.76802819970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9308889508" green="0.26623076200000001" blue="0.65799814459999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="tmt-Z8-9bn" kind="show" id="FbH-hy-Jim"/>
+                                    <segue destination="tmt-Z8-9bn" kind="show" identifier="filtradoSegue" id="FbH-hy-Jim"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -264,6 +217,9 @@
                             <outlet property="delegate" destination="Sia-WF-aBo" id="WAw-pS-Sle"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="searchB" destination="gED-mm-VPR" id="Xbf-9a-hTe"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aO-7y-ZuW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -524,7 +480,7 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                                 <rect key="frame" x="33" y="216" width="309" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
-                                <state key="normal" title="Martín Fernández Lorenzo">
+                                <state key="normal" title="Martin Fernandez L">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -715,12 +671,26 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.86391752960000001" green="0.17879462239999999" blue="0.5788653493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="IG9-6B-xIP">
-                            <rect key="frame" x="0.0" y="72" width="375" height="90"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="IG9-6B-xIP">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7J-kH-jXN">
+                                    <rect key="frame" x="0.0" y="0.0" width="53" height="54"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button" image="if_icon-ios7-arrow-back_211686"/>
+                                    <connections>
+                                        <segue destination="laa-me-igc" kind="show" id="Fk5-30-2Kl"/>
+                                    </connections>
+                                </button>
+                                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XC9-o9-Y6G">
+                                    <rect key="frame" x="53" y="0.0" width="322" height="56"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="barTintColor" red="0.74799755379999999" green="0.13493113770000001" blue="0.51025884430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0T-06-JKC">
-                                    <rect key="frame" x="0.0" y="-5" width="375" height="49"/>
+                                    <rect key="frame" x="0.0" y="56" width="375" height="49"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.9308889508" green="0.26623076200000001" blue="0.65799814459999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
@@ -731,29 +701,16 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                                         <segue destination="Meh-cw-44J" kind="show" id="Qp7-vQ-ioE"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L92-SP-kED">
-                                    <rect key="frame" x="0.0" y="41" width="375" height="49"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.77681308979999997" green="0.14844170209999999" blue="0.51990771290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
-                                    <state key="normal" title="REGRESAR">
-                                        <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </state>
-                                    <connections>
-                                        <segue destination="laa-me-igc" kind="show" id="OB4-kW-hgn"/>
-                                    </connections>
-                                </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.74799755379999999" green="0.13493113770000001" blue="0.51025884430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Lugares" id="tSq-vh-HOH">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="133" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tSq-vh-HOH" id="Xe6-6f-rZQ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" red="0.96652191880000005" green="0.66543537379999995" blue="0.84185630079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="tintColor" red="0.96880942579999996" green="0.48815721270000001" blue="0.76802819970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9308889508" green="0.26623076200000001" blue="0.65799814459999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -768,15 +725,11 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="searchB" destination="XC9-o9-Y6G" id="YbI-S7-SXB"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3r-dy-F6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationBar contentMode="scaleToFill" id="vOn-E1-8DW">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <items>
-                        <navigationItem title="Title" id="Er0-MA-MO8"/>
-                    </items>
-                </navigationBar>
             </objects>
             <point key="canvasLocation" x="1784.8" y="-413.3433283358321"/>
         </scene>
@@ -789,9 +742,21 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sti-Ph-1ui">
-                                <rect key="frame" x="0.0" y="20" width="375" height="577"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <rect key="frame" x="0.0" y="86" width="375" height="511"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ny9-Sd-j7G">
+                                <rect key="frame" x="0.0" y="16" width="375" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.77681308979999997" green="0.14844170209999999" blue="0.51990771290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                <state key="normal" title="Ocultar Mapa">
+                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showM:" destination="Meh-cw-44J" eventType="touchUpInside" id="UaX-OS-gQz"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvQ-hZ-7t1">
                                 <rect key="frame" x="0.0" y="605" width="375" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -804,26 +769,14 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                                     <segue destination="6lJ-4c-ZfS" kind="show" id="AoB-Fb-ErI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MrS-Ms-5tg">
-                                <rect key="frame" x="87" y="127" width="201" height="71"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MrS-Ms-5tg">
+                                <rect key="frame" x="53" y="104" width="268" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.7768130898475647" green="0.14844170212745667" blue="0.51990771293640137" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="45"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="65"/>
                                 <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ny9-Sd-j7G">
-                                <rect key="frame" x="0.0" y="14" width="375" height="62"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.77681308979999997" green="0.14844170209999999" blue="0.51990771290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
-                                <state key="normal" title="Ocultar Mapa">
-                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="showM:" destination="Meh-cw-44J" eventType="touchUpInside" id="UaX-OS-gQz"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.77681308979999997" green="0.14844170209999999" blue="0.51990771290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="pdi-US-Kwh"/>
@@ -847,7 +800,7 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jKfIYoJ62" translatesAutoresizingMaskIntoConstraints="NO" id="AWv-lM-ZUb">
                                 <rect key="frame" x="0.0" y="271" width="375" height="396"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzd-St-xN7">
                                 <rect key="frame" x="152" y="550" width="207" height="62"/>
@@ -902,14 +855,6 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJk-QZ-5kI">
-                                <rect key="frame" x="19" y="76" width="61" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="if_icon-ios7-arrow-back_211686"/>
-                                <connections>
-                                    <segue destination="6lJ-4c-ZfS" kind="show" id="pj5-00-mq5"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgW-va-pZA">
                                 <rect key="frame" x="115" y="222" width="144" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -944,6 +889,14 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                                 <rect key="frame" x="142" y="333" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJk-QZ-5kI">
+                                <rect key="frame" x="10" y="20" width="61" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="if_icon-ios7-arrow-back_211686"/>
+                                <connections>
+                                    <segue destination="6lJ-4c-ZfS" kind="show" id="pj5-00-mq5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.77681308979999997" green="0.14844170209999999" blue="0.51990771290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="BUp-8I-9k5"/>
@@ -953,6 +906,54 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                 <exit id="ikG-OV-TBw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4380" y="-367.46626686656674"/>
+        </scene>
+        <!--Stats View Controller-->
+        <scene sceneID="Gfb-vY-zIY">
+            <objects>
+                <viewController id="YQB-K9-qMW" customClass="Stats_ViewController" customModule="MueveSF" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c5S-uj-TJD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1220"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95n-Gm-gHD">
+                                <rect key="frame" x="16" y="38" width="61" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="if_icon-ios7-arrow-back_211686"/>
+                                <connections>
+                                    <segue destination="VgF-Gt-emV" kind="show" id="FGb-8X-OfH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGx-IN-69E">
+                                <rect key="frame" x="169" y="49" width="190" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
+                                <state key="normal" title="MIS ESTADÍSTICAS">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Io5-zm-tdJ" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="47" y="123" width="312" height="303"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96909385920000002" green="0.8492450118" blue="0.85199362040000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W5a-Ml-Yg4" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="47" y="454" width="312" height="287"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96909385920000002" green="0.8492450118" blue="0.85199362040000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74799755379999999" green="0.13493113770000001" blue="0.51025884430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="mxT-1J-ETz"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="1220"/>
+                    <connections>
+                        <outlet property="chtChart" destination="Io5-zm-tdJ" id="gnA-T8-agd"/>
+                        <outlet property="pieChart" destination="W5a-Ml-Yg4" id="qVJ-Fd-zrh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rh9-O6-UNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1692" y="540.62968515742136"/>
         </scene>
     </scenes>
     <resources>
@@ -975,10 +976,10 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
         <segue reference="pj5-00-mq5"/>
         <segue reference="SyR-Hd-Lp3"/>
         <segue reference="4v7-aE-PmV"/>
-        <segue reference="pg9-uZ-NuE"/>
-        <segue reference="kHZ-7b-Kzq"/>
+        <segue reference="Fk5-30-2Kl"/>
+        <segue reference="DAi-sq-7xq"/>
         <segue reference="i9v-pi-oqe"/>
         <segue reference="CKg-Hg-u6b"/>
-        <segue reference="6KA-ll-ZY1"/>
+        <segue reference="FGb-8X-OfH"/>
     </inferredMetricsTieBreakers>
 </document>
