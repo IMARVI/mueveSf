@@ -12,7 +12,7 @@ class Viajes_TableViewController: UITableViewController, UISearchBarDelegate {
     let direccion = "http://199.233.252.86/201713/SwitchesDeMarfil/lugares_visitados.json"
     var nuevoArray : [Any]?
     var searchActive : Bool = false
-    var data = ["SANTA FE","ARCOS BOSQUES","TEC CSF","CENTRO BANCOMER"]
+    var data = [String]()
     var filtered:[String] = []
     
     @IBOutlet weak var searchB: UISearchBar!
@@ -25,6 +25,7 @@ class Viajes_TableViewController: UITableViewController, UISearchBarDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         searchB.delegate = self
+        fillArray()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -71,7 +72,22 @@ class Viajes_TableViewController: UITableViewController, UISearchBarDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         let siguienteV = segue.destination as! DetalleViaje_ViewController
         let indice = self.tableView.indexPathForSelectedRow?.row
-        let viaje = nuevoArray?[indice!] as! [String: Any]
+        var viaje = nuevoArray?[indice!] as! [String: Any]
+        
+        if(searchActive && filtered.count != 0){
+            var i = 0
+            for _ in nuevoArray!{
+                let compare = nuevoArray?[i] as! [String: Any]
+                let s:String = compare ["nombre"] as! String
+                if s == filtered[indice!]{
+                    viaje = nuevoArray![i] as! [String : Any]
+                }
+                i = i+1
+            }
+        }else{
+            viaje = nuevoArray?[indice!] as! [String: Any]
+        }
+        
         let a:String = viaje ["type"] as! String
         let b:String = viaje ["date_inicio"] as! String
         let c:String = viaje ["date_fin"] as! String
@@ -107,12 +123,27 @@ class Viajes_TableViewController: UITableViewController, UISearchBarDelegate {
             let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
             return range.location != NSNotFound
         })
+        
         if(filtered.count == 0){
             searchActive = false;
         } else {
             searchActive = true;
         }
         self.tableView.reloadData()
+    }
+    
+    func fillArray(){
+        var i = 0
+        for _ in nuevoArray!{
+            let viaje = nuevoArray?[i] as! [String: Any]
+            let s:String = viaje ["nombre"] as! String
+            data.append(s)
+            i = i+1
+        }
+    }
+    
+    func matchArray(){
+        
     }
     /*
     // Override to support conditional editing of the table view.

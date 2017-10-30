@@ -12,7 +12,7 @@ class Lugares_TableViewController: UITableViewController, UISearchBarDelegate{
     let direccion = "http://199.233.252.86/201713/SwitchesDeMarfil/lugares_visitados.json"
     var nuevoArray : [Any]?
     var searchActive : Bool = false
-    var data = ["SANTA FE","ARCOS BOSQUES","TEC CSF","CENTRO BANCOMER"]
+    var data = [String]()
     var filtered:[String] = []
     
     @IBOutlet weak var searchB: UISearchBar!
@@ -40,6 +40,7 @@ class Lugares_TableViewController: UITableViewController, UISearchBarDelegate{
         tableView.delegate = self
         tableView.dataSource = self
         searchB.delegate = self
+        fillArray()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -111,6 +112,16 @@ class Lugares_TableViewController: UITableViewController, UISearchBarDelegate{
             searchActive = true;
         }
         self.tableView.reloadData()
+    }
+    
+    func fillArray(){
+        var i = 0
+        for _ in nuevoArray!{
+            let viaje = nuevoArray?[i] as! [String: Any]
+            let s:String = viaje ["nombre"] as! String
+            data.append(s)
+            i = i+1
+        }
     }
     /*
     // Override to support conditional editing of the table view.
