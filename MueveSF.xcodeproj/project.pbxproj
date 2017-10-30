@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		317BF92FFBBE9CDF0EAD495D /* Pods_MueveSF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B89B516DD26DBB41EE0F8B1D /* Pods_MueveSF.framework */; };
+		5BFD1EC41FA7306000CA7A5F /* Stats_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD1EC31FA7306000CA7A5F /* Stats_ViewController.swift */; };
 		8442D7A81F68BEA9002EDFCD /* PantallaAvance_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442D7A71F68BEA9002EDFCD /* PantallaAvance_ViewController.swift */; };
 		CE3C1B0A1FA6936700CC0C9A /* Lugares_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C1B091FA6936700CC0C9A /* Lugares_TableViewController.swift */; };
 		CEE25E721FA6BCCF00E03D48 /* Social_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE25E711FA6BCCF00E03D48 /* Social_ViewController.swift */; };
@@ -39,22 +41,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01E9B2DB1E0329BB17AC210A /* Pods-MueveSF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MueveSF.release.xcconfig"; path = "Pods/Target Support Files/Pods-MueveSF/Pods-MueveSF.release.xcconfig"; sourceTree = "<group>"; };
+		1AEE08E326D47D7631DDF095 /* Pods-MueveSF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MueveSF.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MueveSF/Pods-MueveSF.debug.xcconfig"; sourceTree = "<group>"; };
+		5BC3F0BA1FA73616006B610C /* MueveSF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MueveSF.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BC3F0BB1FA73616006B610C /* MueveSFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MueveSFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BC3F0BC1FA73616006B610C /* MueveSFUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MueveSFUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BFD1EC31FA7306000CA7A5F /* Stats_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats_ViewController.swift; sourceTree = "<group>"; };
 		8442D7A71F68BEA9002EDFCD /* PantallaAvance_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PantallaAvance_ViewController.swift; sourceTree = "<group>"; };
+		B89B516DD26DBB41EE0F8B1D /* Pods_MueveSF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MueveSF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3C1B091FA6936700CC0C9A /* Lugares_TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lugares_TableViewController.swift; sourceTree = "<group>"; };
 		CEE25E711FA6BCCF00E03D48 /* Social_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social_ViewController.swift; sourceTree = "<group>"; };
 		CEE25E731FA6D05D00E03D48 /* Viajes_TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viajes_TableViewController.swift; sourceTree = "<group>"; };
 		CEE25E751FA6DA2E00E03D48 /* DetalleViaje_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleViaje_ViewController.swift; sourceTree = "<group>"; };
-		CEF310151F6646A000C1C186 /* MueveSF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MueveSF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF310181F6646A000C1C186 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF3101A1F6646A000C1C186 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CEF3101D1F6646A000C1C186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEF3101F1F6646A000C1C186 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEF310221F6646A000C1C186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEF310241F6646A000C1C186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEF310291F6646A000C1C186 /* MueveSFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MueveSFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF3102D1F6646A000C1C186 /* MueveSFTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MueveSFTests.swift; sourceTree = "<group>"; };
 		CEF3102F1F6646A000C1C186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEF310341F6646A000C1C186 /* MueveSFUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MueveSFUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF310381F6646A000C1C186 /* MueveSFUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MueveSFUITests.swift; sourceTree = "<group>"; };
 		CEF3103A1F6646A000C1C186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				317BF92FFBBE9CDF0EAD495D /* Pods_MueveSF.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,24 +91,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE752FD036879F7F089362F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B89B516DD26DBB41EE0F8B1D /* Pods_MueveSF.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CEF3100C1F6646A000C1C186 = {
 			isa = PBXGroup;
 			children = (
 				CEF310171F6646A000C1C186 /* MueveSF */,
 				CEF3102C1F6646A000C1C186 /* MueveSFTests */,
 				CEF310371F6646A000C1C186 /* MueveSFUITests */,
-				CEF310161F6646A000C1C186 /* Products */,
+				BE752FD036879F7F089362F0 /* Frameworks */,
+				5BC3F0BA1FA73616006B610C /* MueveSF.app */,
+				5BC3F0BB1FA73616006B610C /* MueveSFTests.xctest */,
+				5BC3F0BC1FA73616006B610C /* MueveSFUITests.xctest */,
+				E7B70947CA1403CC25F69345 /* Pods */,
 			);
-			sourceTree = "<group>";
-		};
-		CEF310161F6646A000C1C186 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CEF310151F6646A000C1C186 /* MueveSF.app */,
-				CEF310291F6646A000C1C186 /* MueveSFTests.xctest */,
-				CEF310341F6646A000C1C186 /* MueveSFUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		CEF310171F6646A000C1C186 /* MueveSF */ = {
@@ -109,6 +118,7 @@
 			children = (
 				CEF310181F6646A000C1C186 /* AppDelegate.swift */,
 				CEF3101A1F6646A000C1C186 /* ViewController.swift */,
+				5BFD1EC31FA7306000CA7A5F /* Stats_ViewController.swift */,
 				CEF3101C1F6646A000C1C186 /* Main.storyboard */,
 				CEE25E711FA6BCCF00E03D48 /* Social_ViewController.swift */,
 				CE3C1B091FA6936700CC0C9A /* Lugares_TableViewController.swift */,
@@ -140,6 +150,15 @@
 			path = MueveSFUITests;
 			sourceTree = "<group>";
 		};
+		E7B70947CA1403CC25F69345 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1AEE08E326D47D7631DDF095 /* Pods-MueveSF.debug.xcconfig */,
+				01E9B2DB1E0329BB17AC210A /* Pods-MueveSF.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEF3103D1F6646A000C1C186 /* Build configuration list for PBXNativeTarget "MueveSF" */;
 			buildPhases = (
+				A7E01BCAA8CFEA0258385A77 /* [CP] Check Pods Manifest.lock */,
 				CEF310111F6646A000C1C186 /* Sources */,
 				CEF310121F6646A000C1C186 /* Frameworks */,
 				CEF310131F6646A000C1C186 /* Resources */,
+				86F02107AF6980BED8DA9BD1 /* [CP] Embed Pods Frameworks */,
+				2342F2937752CAA559FCF8F1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -157,7 +179,7 @@
 			);
 			name = MueveSF;
 			productName = MueveSF;
-			productReference = CEF310151F6646A000C1C186 /* MueveSF.app */;
+			productReference = 5BC3F0BA1FA73616006B610C /* MueveSF.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CEF310281F6646A000C1C186 /* MueveSFTests */ = {
@@ -175,7 +197,7 @@
 			);
 			name = MueveSFTests;
 			productName = MueveSFTests;
-			productReference = CEF310291F6646A000C1C186 /* MueveSFTests.xctest */;
+			productReference = 5BC3F0BB1FA73616006B610C /* MueveSFTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		CEF310331F6646A000C1C186 /* MueveSFUITests */ = {
@@ -193,7 +215,7 @@
 			);
 			name = MueveSFUITests;
 			productName = MueveSFUITests;
-			productReference = CEF310341F6646A000C1C186 /* MueveSFUITests.xctest */;
+			productReference = 5BC3F0BC1FA73616006B610C /* MueveSFUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -237,7 +259,7 @@
 				Base,
 			);
 			mainGroup = CEF3100C1F6646A000C1C186;
-			productRefGroup = CEF310161F6646A000C1C186 /* Products */;
+			productRefGroup = CEF3100C1F6646A000C1C186;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -275,6 +297,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2342F2937752CAA559FCF8F1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MueveSF/Pods-MueveSF-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86F02107AF6980BED8DA9BD1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MueveSF/Pods-MueveSF-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MueveSF/Pods-MueveSF-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7E01BCAA8CFEA0258385A77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MueveSF-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CEF310111F6646A000C1C186 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -282,6 +358,7 @@
 			files = (
 				CEF3101B1F6646A000C1C186 /* ViewController.swift in Sources */,
 				CEF310191F6646A000C1C186 /* AppDelegate.swift in Sources */,
+				5BFD1EC41FA7306000CA7A5F /* Stats_ViewController.swift in Sources */,
 				CEE25E761FA6DA2F00E03D48 /* DetalleViaje_ViewController.swift in Sources */,
 				CEE25E721FA6BCCF00E03D48 /* Social_ViewController.swift in Sources */,
 				8442D7A81F68BEA9002EDFCD /* PantallaAvance_ViewController.swift in Sources */,
@@ -450,6 +527,7 @@
 		};
 		CEF3103E1F6646A000C1C186 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AEE08E326D47D7631DDF095 /* Pods-MueveSF.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -467,6 +545,7 @@
 		};
 		CEF3103F1F6646A000C1C186 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01E9B2DB1E0329BB17AC210A /* Pods-MueveSF.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
