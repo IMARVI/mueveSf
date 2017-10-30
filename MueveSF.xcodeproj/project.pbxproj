@@ -10,6 +10,8 @@
 		8442D7A81F68BEA9002EDFCD /* PantallaAvance_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442D7A71F68BEA9002EDFCD /* PantallaAvance_ViewController.swift */; };
 		CE3C1B0A1FA6936700CC0C9A /* Lugares_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C1B091FA6936700CC0C9A /* Lugares_TableViewController.swift */; };
 		CEE25E721FA6BCCF00E03D48 /* Social_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE25E711FA6BCCF00E03D48 /* Social_ViewController.swift */; };
+		CEE25E741FA6D05D00E03D48 /* Viajes_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE25E731FA6D05D00E03D48 /* Viajes_TableViewController.swift */; };
+		CEE25E761FA6DA2F00E03D48 /* DetalleViaje_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE25E751FA6DA2E00E03D48 /* DetalleViaje_ViewController.swift */; };
 		CEF310191F6646A000C1C186 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF310181F6646A000C1C186 /* AppDelegate.swift */; };
 		CEF3101B1F6646A000C1C186 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3101A1F6646A000C1C186 /* ViewController.swift */; };
 		CEF3101E1F6646A000C1C186 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF3101C1F6646A000C1C186 /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 		8442D7A71F68BEA9002EDFCD /* PantallaAvance_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PantallaAvance_ViewController.swift; sourceTree = "<group>"; };
 		CE3C1B091FA6936700CC0C9A /* Lugares_TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lugares_TableViewController.swift; sourceTree = "<group>"; };
 		CEE25E711FA6BCCF00E03D48 /* Social_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social_ViewController.swift; sourceTree = "<group>"; };
+		CEE25E731FA6D05D00E03D48 /* Viajes_TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viajes_TableViewController.swift; sourceTree = "<group>"; };
+		CEE25E751FA6DA2E00E03D48 /* DetalleViaje_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleViaje_ViewController.swift; sourceTree = "<group>"; };
 		CEF310151F6646A000C1C186 /* MueveSF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MueveSF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF310181F6646A000C1C186 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF3101A1F6646A000C1C186 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 				CEF3101C1F6646A000C1C186 /* Main.storyboard */,
 				CEE25E711FA6BCCF00E03D48 /* Social_ViewController.swift */,
 				CE3C1B091FA6936700CC0C9A /* Lugares_TableViewController.swift */,
+				CEE25E731FA6D05D00E03D48 /* Viajes_TableViewController.swift */,
+				CEE25E751FA6DA2E00E03D48 /* DetalleViaje_ViewController.swift */,
 				8442D7A71F68BEA9002EDFCD /* PantallaAvance_ViewController.swift */,
 				CEF3101F1F6646A000C1C186 /* Assets.xcassets */,
 				CEF310211F6646A000C1C186 /* LaunchScreen.storyboard */,
@@ -276,8 +282,10 @@
 			files = (
 				CEF3101B1F6646A000C1C186 /* ViewController.swift in Sources */,
 				CEF310191F6646A000C1C186 /* AppDelegate.swift in Sources */,
+				CEE25E761FA6DA2F00E03D48 /* DetalleViaje_ViewController.swift in Sources */,
 				CEE25E721FA6BCCF00E03D48 /* Social_ViewController.swift in Sources */,
 				8442D7A81F68BEA9002EDFCD /* PantallaAvance_ViewController.swift in Sources */,
+				CEE25E741FA6D05D00E03D48 /* Viajes_TableViewController.swift in Sources */,
 				CE3C1B0A1FA6936700CC0C9A /* Lugares_TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
