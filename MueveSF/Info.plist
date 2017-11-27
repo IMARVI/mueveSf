@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Acceso al carrete de fotos</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Usar fotos</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Tomar fotografias y compartirlas</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Location is required to find out where you are</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

@@ -21,9 +21,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="jKfIYoJ62" translatesAutoresizingMaskIntoConstraints="NO" id="w6U-JA-J2d">
-                                <rect key="frame" x="-106" y="155" width="512" height="512"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CM" translatesAutoresizingMaskIntoConstraints="NO" id="EPf-or-QVB">
+                                <rect key="frame" x="0.0" y="144" width="375" height="366"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.86391752958297729" green="0.17879462242126465" blue="0.57886534929275513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -35,6 +35,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="jKfIYoJ62" width="512" height="512"/>
+        <image name="CM" width="518" height="518"/>
     </resources>
 </document>

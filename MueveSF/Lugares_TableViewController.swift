@@ -14,22 +14,9 @@ class Lugares_TableViewController: UITableViewController, UISearchBarDelegate{
     var searchActive : Bool = false
     var data = [String]()
     var filtered:[String] = []
+    var trans:String = ""
     
     @IBOutlet weak var searchB: UISearchBar!
-    
-    func JSONParseArray(_ string:String) -> [AnyObject]{
-        if let data = string.data(using: String.Encoding.utf8){
-            do{
-                if let array = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? [AnyObject] {
-                    print("succed")
-                    return array
-                }
-            } catch{
-                print("error")
-            }
-        }
-        return [AnyObject]()
-    }
     
     
     override func viewDidLoad() {
@@ -41,6 +28,10 @@ class Lugares_TableViewController: UITableViewController, UISearchBarDelegate{
         tableView.dataSource = self
         searchB.delegate = self
         fillArray()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(Viajes_TableViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -50,6 +41,10 @@ class Lugares_TableViewController: UITableViewController, UISearchBarDelegate{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     // MARK: - Table view data source
@@ -121,6 +116,60 @@ class Lugares_TableViewController: UITableViewController, UISearchBarDelegate{
             let s:String = viaje ["nombre"] as! String
             data.append(s)
             i = i+1
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "celda" {
+            let siguienteV = segue.destination as! PantallaAvance_ViewController
+            let indice = self.tableView.indexPathForSelectedRow?.row
+            var viaje = nuevoArray?[indice!] as! [String: Any]
+            
+            if(searchActive && filtered.count != 0){
+                var i = 0
+                for _ in nuevoArray!{
+                    let compare = nuevoArray?[i] as! [String: Any]
+                    let s:String = compare ["nombre"] as! String
+                    if s == filtered[indice!]{
+                        viaje = nuevoArray![i] as! [String : Any]
+                    }
+                    i = i+1
+                }
+            }else{
+                viaje = nuevoArray?[indice!] as! [String: Any]
+            }
+            let a:String = viaje ["nombre"] as! String
+            siguienteV.lugar = a
+        }
+        switch segue.identifier{
+            case "metro"?:
+                let siguienteV = segue.destination as! PantallaAvance_ViewController
+                siguienteV.trans = "metro"
+            break
+        
+            case "bici"?:
+                let siguienteV = segue.destination as! PantallaAvance_ViewController
+                siguienteV.trans = "bici"
+            break
+            
+            case "carro"?:
+                let siguienteV = segue.destination as! PantallaAvance_ViewController
+                siguienteV.trans = "carro"
+            break
+            
+            case "metroBus"?:
+                let siguienteV = segue.destination as! PantallaAvance_ViewController
+                siguienteV.trans = "metroBus"
+            break
+            
+            case "rtp"?:
+                let siguienteV = segue.destination as! PantallaAvance_ViewController
+                siguienteV.trans = "rtp"
+            break
+            
+            default:
+            break
+            
         }
     }
     /*

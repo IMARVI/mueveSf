@@ -17,6 +17,7 @@ class Viajes_TableViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchB: UISearchBar!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let url = URL(string: direccion)
@@ -26,6 +27,10 @@ class Viajes_TableViewController: UITableViewController, UISearchBarDelegate {
         tableView.dataSource = self
         searchB.delegate = self
         fillArray()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(Viajes_TableViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -36,6 +41,10 @@ class Viajes_TableViewController: UITableViewController, UISearchBarDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     // MARK: - Table view data source

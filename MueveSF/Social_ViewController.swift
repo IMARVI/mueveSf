@@ -9,11 +9,58 @@
 import UIKit
 import Social
 
-class Social_ViewController: UIViewController {
-
-    @IBAction func inst(_ sender: UIButton) {
+class Social_ViewController: UIViewController, UIImagePickerControllerDelegate,
+UINavigationControllerDelegate{
+    
+    var imagePicker: UIImagePickerController!
+    @IBOutlet weak var bttnGuardar: UIButton!
+    @IBOutlet weak var imageTake: UIImageView!
+    
+    
+    @IBAction func tomaFoto(_ sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker =  UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .camera
+            present(imagePicker, animated: true, completion: nil)
+            bttnGuardar.isHidden = false
+        } else {
+            noCamera()
+        }
+    }
+    func noCamera(){
+        let alertVC = UIAlertController(
+            title: "No Camara",
+            message: "Este dispositivo no tiene camara",
+            preferredStyle: .alert)
+        let okAction = UIAlertAction(
+            title: "OK",
+            style:.default,
+            handler: nil)
+        alertVC.addAction(okAction)
+        present(
+            alertVC,
+            animated: true,
+            completion: nil)
     }
 
+    @IBAction func guardar(_ sender: UIButton) {
+        UIImageWriteToSavedPhotosAlbum(imageTake.image!, nil, nil, nil)
+        let alert = UIAlertController(title: "Guardado", message: "Tu imagen se ha guardado en el iphone :)", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Gracias", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        imageTake.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        picker.dismiss(animated: true, completion: nil)
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    
     @IBAction func fb(_ sender: UIButton) {
         if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook){
             let facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
@@ -39,7 +86,7 @@ class Social_ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        bttnGuardar.isHidden = true
         // Do any additional setup after loading the view.
     }
 
@@ -47,8 +94,6 @@ class Social_ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     /*
     // MARK: - Navigation
 

@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>widgetSF.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>CE90B3041FC521AE0034B1C9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>CEF310141F6646A000C1C186</key>
 		<dict>
 			<key>primary</key>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,22 +15,14 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Perfil View Controller-->
         <scene sceneID="Usw-X7-Sz3">
             <objects>
-                <viewController id="VgF-Gt-emV" sceneMemberID="viewController">
+                <viewController id="VgF-Gt-emV" customClass="Perfil_ViewController" customModule="MueveSF" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w58-Q1-RMn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3A-G5-MSq">
-                                <rect key="frame" x="24" y="74" width="61" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="if_icon-ios7-arrow-back_211686"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="CKg-Hg-u6b"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ID 1324567" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiV-4H-u94">
                                 <rect key="frame" x="24" y="164" width="272" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -68,12 +60,22 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrI-Of-4Me">
-                                <rect key="frame" x="210" y="74" width="105" height="41"/>
+                                <rect key="frame" x="171" y="74" width="105" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
                                 <state key="normal" title="MI PERFIL">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEn-US-4nQ">
+                                <rect key="frame" x="284" y="64" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Editar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1Be-WX-0zx" kind="show" id="aKJ-xr-xF6"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Km Recorridos: 100km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1q-tT-w5Y">
                                 <rect key="frame" x="24" y="241" width="312" height="37"/>
@@ -100,19 +102,87 @@
                                     <segue destination="YQB-K9-qMW" kind="show" id="b7g-hJ-Vvg"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-user" translatesAutoresizingMaskIntoConstraints="NO" id="fUb-j3-VY1">
+                                <rect key="frame" x="284" y="64" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3A-G5-MSq">
+                                <rect key="frame" x="24" y="68" width="61" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="if_icon-ios7-arrow-back_211686"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="CKg-Hg-u6b"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.74799755379999999" green="0.13493113770000001" blue="0.51025884430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ENI-jY-dj6"/>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="fUb-j3-VY1" id="x5r-I5-Y9V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qla-C2-lv4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-463.19999999999999" y="375.56221889055473"/>
         </scene>
-        <!--View Controller-->
+        <!--Image View Controller-->
+        <scene sceneID="UXJ-nh-hMm">
+            <objects>
+                <viewController id="1Be-WX-0zx" customClass="Image_ViewController" customModule="MueveSF" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7wc-3b-csI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WmU-ny-BGn">
+                                <rect key="frame" x="0.0" y="81" width="375" height="586"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4c-yq-6xJ">
+                                <rect key="frame" x="16" y="33" width="61" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="if_icon-ios7-arrow-back_211686"/>
+                                <connections>
+                                    <segue destination="VgF-Gt-emV" kind="show" id="hMw-Qe-WMe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyj-nZ-cjN">
+                                <rect key="frame" x="254" y="606" width="105" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDJ-oR-dZE">
+                                <rect key="frame" x="270" y="39" width="73" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
+                                <state key="normal" title="EDITAR">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cargar:" destination="jGl-Tf-wab" eventType="touchUpInside" id="1pC-Il-ts0"/>
+                                    <action selector="cargar:" destination="1Be-WX-0zx" eventType="touchUpInside" id="w01-RY-Kqi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.77681308979999997" green="0.14844170209999999" blue="0.51990771290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="RL0-Yv-DZL"/>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="WmU-ny-BGn" id="wq0-7T-6kn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="868-8N-pyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="jGl-Tf-wab" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-868" y="-316.19190404797604"/>
+        </scene>
+        <!--Principal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MueveSF" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="Principal_ViewController" customModule="MueveSF" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,7 +248,7 @@
                             <subviews>
                                 <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="prominent" translatesAutoresizingMaskIntoConstraints="NO" id="gED-mm-VPR">
                                     <rect key="frame" x="61" y="5" width="314" height="56"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <color key="barTintColor" red="0.74799755379999999" green="0.13493113770000001" blue="0.51025884430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <scopeButtonTitles>
@@ -552,11 +622,7 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Bus-128" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sXi-97-AxG">
-                                <rect key="frame" x="136" y="152" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Train-128" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="asr-fv-I68">
-                                <rect key="frame" x="30" y="344" width="80" height="80"/>
+                                <rect key="frame" x="147" y="152" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Car-128" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PDr-QD-dpk">
@@ -568,7 +634,7 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Instagram-96" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kpb-se-Fca">
-                                <rect key="frame" x="136" y="246" width="80" height="80"/>
+                                <rect key="frame" x="147" y="246" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Twitter-96" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8J-Bu-jyr">
@@ -576,7 +642,11 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Train-128" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="roP-YX-GVn">
-                                <rect key="frame" x="136" y="344" width="80" height="80"/>
+                                <rect key="frame" x="147" y="344" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Train-128" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="asr-fv-I68">
+                                <rect key="frame" x="30" y="344" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -588,10 +658,10 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
             </objects>
             <point key="canvasLocation" x="-463" y="1139"/>
         </scene>
-        <!--View Controller-->
+        <!--Transporte View Controller-->
         <scene sceneID="KrX-Ml-4Py">
             <objects>
-                <viewController id="laa-me-igc" sceneMemberID="viewController">
+                <viewController id="laa-me-igc" customClass="Transporte_ViewController" customModule="MueveSF" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P9e-nf-fmL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -601,7 +671,7 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="car"/>
                                 <connections>
-                                    <segue destination="LJv-ot-Lsu" kind="show" id="4v7-aE-PmV"/>
+                                    <segue destination="LJv-ot-Lsu" kind="show" identifier="carro" id="4v7-aE-PmV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8v-e9-cnY">
@@ -609,7 +679,7 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Metrobus"/>
                                 <connections>
-                                    <segue destination="LJv-ot-Lsu" kind="show" id="9Ry-OS-aPz"/>
+                                    <segue destination="LJv-ot-Lsu" kind="show" identifier="metroBus" id="9Ry-OS-aPz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFL-Sz-oeh">
@@ -617,7 +687,7 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Metro"/>
                                 <connections>
-                                    <segue destination="LJv-ot-Lsu" kind="show" id="QP0-SK-y8i"/>
+                                    <segue destination="LJv-ot-Lsu" kind="show" identifier="metro" id="QP0-SK-y8i"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿EN QUÉ TE MUEVES?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SdQ-CF-RnP">
@@ -632,7 +702,7 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="cycle"/>
                                 <connections>
-                                    <segue destination="LJv-ot-Lsu" kind="show" id="3U3-9p-RyH"/>
+                                    <segue destination="LJv-ot-Lsu" kind="show" identifier="bici" id="3U3-9p-RyH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLP-5h-3uu">
@@ -643,7 +713,7 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="LJv-ot-Lsu" kind="show" id="cGx-v8-cnT"/>
+                                    <segue destination="LJv-ot-Lsu" kind="show" identifier="rtp" id="cGx-v8-cnT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q14-qP-HPf">
@@ -673,11 +743,11 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                         <color key="backgroundColor" red="0.86391752960000001" green="0.17879462239999999" blue="0.5788653493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="IG9-6B-xIP">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7J-kH-jXN">
                                     <rect key="frame" x="0.0" y="0.0" width="53" height="54"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button" image="if_icon-ios7-arrow-back_211686"/>
                                     <connections>
                                         <segue destination="laa-me-igc" kind="show" id="Fk5-30-2Kl"/>
@@ -691,7 +761,7 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                                 </searchBar>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0T-06-JKC">
                                     <rect key="frame" x="0.0" y="56" width="375" height="49"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.9308889508" green="0.26623076200000001" blue="0.65799814459999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
                                     <state key="normal" title="NUEVO DESTINO">
@@ -715,7 +785,7 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9308889508" green="0.26623076200000001" blue="0.65799814459999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="Meh-cw-44J" kind="show" id="SyR-Hd-Lp3"/>
+                                    <segue destination="Meh-cw-44J" kind="show" identifier="lugar" id="SyR-Hd-Lp3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -744,6 +814,14 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sti-Ph-1ui">
                                 <rect key="frame" x="0.0" y="86" width="375" height="511"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="DEp-FK-Yxf" appends="YES" id="bbT-lP-Z7x"/>
+                                    <outletCollection property="gestureRecognizers" destination="SiM-G9-DuG" appends="YES" id="TzI-0B-BZP"/>
+                                    <outletCollection property="gestureRecognizers" destination="q2i-aj-JOj" appends="YES" id="m5v-dj-Q4Q"/>
+                                    <outletCollection property="gestureRecognizers" destination="pMQ-hr-Nwh" appends="YES" id="zQf-dP-L8f"/>
+                                    <outletCollection property="gestureRecognizers" destination="63p-fh-e6V" appends="YES" id="lgW-zQ-8XU"/>
+                                </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ny9-Sd-j7G">
                                 <rect key="frame" x="0.0" y="16" width="375" height="62"/>
@@ -766,7 +844,7 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                                     <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6lJ-4c-ZfS" kind="show" id="AoB-Fb-ErI"/>
+                                    <segue destination="6lJ-4c-ZfS" kind="show" identifier="detenerSegue" id="AoB-Fb-ErI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MrS-Ms-5tg">
@@ -787,6 +865,31 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnA-pD-hnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="DEp-FK-Yxf">
+                    <connections>
+                        <action selector="mover:" destination="Meh-cw-44J" id="EH3-rQ-wTE"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="SiM-G9-DuG">
+                    <connections>
+                        <action selector="doble:" destination="Meh-cw-44J" id="nVe-h7-5Lc"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="q2i-aj-JOj">
+                    <connections>
+                        <action selector="long:" destination="Meh-cw-44J" id="fM6-JM-9OC"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pinchGestureRecognizer id="pMQ-hr-Nwh">
+                    <connections>
+                        <action selector="pinch:" destination="Meh-cw-44J" id="0nR-CF-ipT"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="63p-fh-e6V">
+                    <connections>
+                        <action selector="rotate:" destination="Meh-cw-44J" id="N46-4U-0z8"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2660" y="-366.56671664167919"/>
         </scene>
@@ -798,9 +901,9 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jKfIYoJ62" translatesAutoresizingMaskIntoConstraints="NO" id="AWv-lM-ZUb">
-                                <rect key="frame" x="0.0" y="271" width="375" height="396"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AI" translatesAutoresizingMaskIntoConstraints="NO" id="ZKG-4H-09c">
+                                <rect key="frame" x="-96" y="102" width="551" height="565"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzd-St-xN7">
                                 <rect key="frame" x="152" y="550" width="207" height="62"/>
@@ -855,8 +958,20 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nz-Jw-0p7">
+                                <rect key="frame" x="142" y="423" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.77681308979999997" green="0.14844170209999999" blue="0.51990771290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                <state key="normal" backgroundImage="icons8-Instagram-96">
+                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tomaFoto:" destination="lrX-Ud-VeV" eventType="touchUpInside" id="X80-zL-xvZ"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgW-va-pZA">
-                                <rect key="frame" x="115" y="222" width="144" height="62"/>
+                                <rect key="frame" x="115" y="154" width="144" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.77681308979999997" green="0.14844170209999999" blue="0.51990771290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
@@ -868,8 +983,28 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                                     <action selector="fb:" destination="lrX-Ud-VeV" eventType="touchUpInside" id="W3V-7i-07F"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJk-QZ-5kI">
+                                <rect key="frame" x="10" y="20" width="61" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="if_icon-ios7-arrow-back_211686"/>
+                                <connections>
+                                    <segue destination="6lJ-4c-ZfS" kind="show" id="pj5-00-mq5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpo-Fj-Syo">
+                                <rect key="frame" x="61" y="511" width="253" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.77681308979999997" green="0.14844170209999999" blue="0.51990771290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                <state key="normal" title="¡TOMAR UNA FOTO!">
+                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tomaFoto:" destination="lrX-Ud-VeV" eventType="touchUpInside" id="Djo-9D-2dd"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfb-yo-CyO">
-                                <rect key="frame" x="123" y="421" width="119" height="62"/>
+                                <rect key="frame" x="123" y="331" width="119" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.77681308979999997" green="0.14844170209999999" blue="0.51990771290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
@@ -881,26 +1016,54 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
                                     <action selector="tw:" destination="lrX-Ud-VeV" eventType="touchUpInside" id="lFU-bZ-QsN"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Facebook-96" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24r-yq-bd5">
-                                <rect key="frame" x="142" y="145" width="80" height="80"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GrI-4P-ic8">
+                                <rect key="frame" x="149" y="429" width="67" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Twitter-96" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T8t-u5-y8F">
-                                <rect key="frame" x="142" y="333" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJk-QZ-5kI">
-                                <rect key="frame" x="10" y="20" width="61" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="if_icon-ios7-arrow-back_211686"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7G-TM-c3b">
+                                <rect key="frame" x="117" y="561" width="130" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                <state key="normal" title="GUARDAR">
+                                    <color key="titleColor" red="1" green="0.96765034640000003" blue="0.96347131630000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <segue destination="6lJ-4c-ZfS" kind="show" id="pj5-00-mq5"/>
+                                    <action selector="guardar:" destination="lrX-Ud-VeV" eventType="touchUpInside" id="lbi-hD-XGz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4t-Vc-LXk">
+                                <rect key="frame" x="142" y="75" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.77681308979999997" green="0.14844170209999999" blue="0.51990771290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                <state key="normal" backgroundImage="icons8-Facebook-96">
+                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="fb:" destination="lrX-Ud-VeV" eventType="touchUpInside" id="D8n-Rf-bhp"/>
+                                    <action selector="fb:" destination="ikG-OV-TBw" eventType="touchUpInside" id="qe0-iS-rjf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9o-Y8-fJn">
+                                <rect key="frame" x="142" y="250" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.77681308979999997" green="0.14844170209999999" blue="0.51990771290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" backgroundImage="icons8-Twitter-96">
+                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tw:" destination="ikG-OV-TBw" eventType="touchUpInside" id="636-Gi-Rui"/>
+                                    <action selector="tw:" destination="lrX-Ud-VeV" eventType="touchUpInside" id="cKe-23-lVV"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.77681308979999997" green="0.14844170209999999" blue="0.51990771290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="BUp-8I-9k5"/>
                     </view>
+                    <connections>
+                        <outlet property="bttnGuardar" destination="k7G-TM-c3b" id="gdp-fp-tKA"/>
+                        <outlet property="imageTake" destination="GrI-4P-ic8" id="WGU-Zs-74K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7C8-1g-RRD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ikG-OV-TBw" userLabel="Exit" sceneMemberID="exit"/>
@@ -957,10 +1120,12 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
         </scene>
     </scenes>
     <resources>
+        <image name="AI" width="626" height="626"/>
         <image name="Metro" width="500" height="503"/>
         <image name="Metrobus" width="1280" height="802"/>
         <image name="car" width="512" height="512"/>
         <image name="cycle" width="512" height="512"/>
+        <image name="default-user" width="165" height="165"/>
         <image name="icons8-Bicycle-80" width="80" height="80"/>
         <image name="icons8-Bus-128" width="128" height="128"/>
         <image name="icons8-Car-128" width="128" height="128"/>
@@ -969,17 +1134,16 @@ Cualquier asunto relacionado con el presente Aviso de Privacidad, podrá ser ate
         <image name="icons8-Train-128" width="128" height="128"/>
         <image name="icons8-Twitter-96" width="96" height="96"/>
         <image name="if_icon-ios7-arrow-back_211686" width="128" height="128"/>
-        <image name="jKfIYoJ62" width="512" height="512"/>
         <image name="logo" width="497" height="171"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="pj5-00-mq5"/>
         <segue reference="SyR-Hd-Lp3"/>
-        <segue reference="4v7-aE-PmV"/>
-        <segue reference="Fk5-30-2Kl"/>
-        <segue reference="DAi-sq-7xq"/>
+        <segue reference="9Ry-OS-aPz"/>
+        <segue reference="pg9-uZ-NuE"/>
+        <segue reference="kHZ-7b-Kzq"/>
         <segue reference="i9v-pi-oqe"/>
-        <segue reference="CKg-Hg-u6b"/>
-        <segue reference="FGb-8X-OfH"/>
+        <segue reference="MZp-re-Prw"/>
+        <segue reference="Fzs-EI-KDr"/>
     </inferredMetricsTieBreakers>
 </document>
